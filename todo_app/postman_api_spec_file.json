@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "9c3d7ece-dee2-4062-9d05-5565f68f1d65",
+		"name": "todoapp",
+		"description": "This collection contains endpoints for managing a Todo List application. It includes APIs for user authentication, task management, and category management. Use these endpoints to create, update, delete, and retrieve tasks and categories.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38187418"
+	},
+	"item": [
+		{
+			"name": "todoapp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NzAyOTk4LCJpYXQiOjE3MjU3MDI2OTgsImp0aSI6IjRjZjRiYzc1ODNlYzQ2OTBhZTc3NjI2OGE0ZGNmNTBjIiwidXNlcl9pZCI6MX0.YE5w5cnrmZ8eWSbej5gpIKit8FmRI3nLpfwKL2oEp0U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"todoapp\",\r\n    \"password\": \"todoapp\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				},
+				"description": "This endpoint allows users to create a new task. Provide the task details in the request body, including title, description, deadline, priority, and completion status. The response will include the newly created task with its ID."
+			},
+			"response": []
+		}
+	]
+}
